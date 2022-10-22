@@ -1,7 +1,6 @@
-import { Todo } from "./todo";
+import { ResponseModel } from './responseModel';
+import { Todo } from './todo';
 
-export interface TodoResponseModel {
-    data:Todo[],
-    success:boolean,
-    response:string
+export interface TodoResponseModel extends ResponseModel {
+  data: Todo[];
 }
