@@ -1,4 +1,19 @@
-<table class="table">
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-border text-primary"
+  role="status"
+>
+  <span class="sr-only">Loading...</span>
+</div>
+<table *ngIf="dataLoaded == true" class="table">
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+  </thead>
   <tr *ngFor="let todo of todos">
     <td>{{ todo.userId }}</td>
     <td>{{ todo.id }}</td>
